@@ -1,5 +1,8 @@
 """ filename: parameters.py """
-
+try:
+    import config
+except ImportError:
+    import config_example as config
 
 # search query 
 search_query = 'site:linkedin.com/in/ AND "freelance grant writer" AND "united states"'
@@ -9,6 +12,6 @@ search_query = 'site:linkedin.com/in/ AND "freelance grant writer" AND "united s
 file_name = 'results_file.csv'
 
 # login credentials
-linkedin_username = 'armanyanarman3@gmail.com'
-linkedin_password = 'g4cL\)5+aT:,Q$!'
+linkedin_username = config.linkedin_username
+linkedin_password = config.linkedin_password
 
